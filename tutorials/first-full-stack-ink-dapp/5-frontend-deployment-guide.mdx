@@ -1,3 +1,33 @@
 # Frontend deployment guide
 ## Deploying on Vercel
+Since we are using Next.js to build the frontend, we can easily deploy it to production using Vercel platform. Follow the steps below to deploy your dApp on Vercel.
+
+### Create a Vercel account
+Go to [Vercel](https://vercel.com/signup) and create an account. Choose `Continue with GitHub` to link your GitHub account with the platform,
+and go through with the sign up process.
+
+### Import your `inkathon` repository
+Once you are successfully signed up, import your `inkathon` repository on Vercel. You can do so on this [link](https://vercel.com/import/git).
+First, install `Vercel for GitHub`. Then, either give access to `All repositories` or `Only select repositories` and select your `inkathon` repository to import it.
+
+![import-repo](./assets/import-repo-git.png)
+
+### Configure your ink!athon deployment
+A `Configure Project` form will appear. 
+
+![configure-project](./assets/configure-project-vercel.png)
+
+You can leave the form as is -- it will use **pre-defined values** and Vercel will automatically detect that it is a Next.js app
+and will set up optimal build settings for you. 
+
+However, make sure that the `Root directory` field is empty (set to the root of monorepo), otherwise the build might fail.
+
+![root-directory](./assets/root-directory-vercel.png)
+
+Click on `Deploy` to continue.
+
+Your Next.js app will start building. It will finish in a couple of minutes. When the deployment is done, you will get **deployment URLs**. Click on one of them to visit your app live.
+
+Congratulations! Your dApp is now live on Vercel and publicly accessible.
+
 ## Deploying on a non-Vercel environment (using Docker image)
