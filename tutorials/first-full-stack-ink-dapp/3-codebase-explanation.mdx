@@ -1,7 +1,7 @@
 # Detailed explanation of the codebase
-## Root Project
+## Project Root
 
-On the root project, some shorthand scripts inside [package.json](https://github.com/scio-labs/inkathon/blob/main/package.json#L15-L27) might be useful during development. These scripts facilitates on setting up the project and interacting with the dApp components (frontend and contract). They can also do linting, type-checking, and changeset.
+On the project root, some shorthand scripts inside [package.json](https://github.com/scio-labs/inkathon/blob/main/package.json#L15-L27) might be useful during development. These scripts facilitates on setting up the project and interacting with the dApp components (frontend and contract). They can also do linting, type-checking, and changeset.
 
 ## Frontend
 
@@ -44,4 +44,4 @@ Going down, we see [#[ink(event)] macro](https://use.ink/macros-attributes/event
 We also can see [#[ink(storage)]](https://use.ink/macros-attributes/storage) macro which is applied to `Greeter` struct, and stores the greeting `message` in string.
 One important macro is the [#[ink(constructor)] macro](https://use.ink/macros-attributes/constructor), which is applied to a function that initialises a new greeter contract with the given value, and to another which sets a `default_message`. Another important one is [#[ink(message)] macro](https://use.ink/macros-attributes/message/), which applies to `greet` and `set_message` methods. It is important to note that **there should be at least one method applied for each of these macros inside a contract module (otherwise the contract will not compile).**
 
-Well done, now you have understood better how the boilerplate works! Bigger challenge ahead: extending the dApp with a new feature.
+Well done, now you have understood better how the boilerplate works! Bigger challenge awaits: extending the dApp with a new feature.

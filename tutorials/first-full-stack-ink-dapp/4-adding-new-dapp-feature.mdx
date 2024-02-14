@@ -12,3 +12,9 @@ After that, we do the exact thing as before. Build the contract with `pnpm run b
 As usual, we will need to connect the frontend to the newly deployed contract. However, in this case we need to add new UI into the dApp so that we can execute `reverse_message` from the frontend.
 
 To do this, find and open [greeter-contract-interactions.ts](https://github.com/scio-labs/inkathon/blob/main/frontend/src/components/web3/greeter-contract-interactions.tsx) on the frontend subdirectory. Again, type `Workshop`, select `Workshop Frontend Snippet #1` just above `if (!api) return null` line. A function with onClick event handler will be generated, which will then send a transaction to the contract to reverse the message when a button is clicked. We now need to create the corresponding button. Go down and find the closing tag of `<Card/>` component of Update Greeting widget. Type `Workshop` and select `Workshop Frontend Snippet #2`, then confirm. A jsx code will be created for a widget containing a button. To see what this button does, run `pnpm dev` and open [localhost:3000](http://localhost:3000) on the browser. At the bottom of the page, look for a widget with purple `Submit` button just below Update Greeting widget. Click on it and then confirm the popup of transaction details. The message should be reversed now.
+
+That's amazing, isn't it? We have successfully added a new feature to the dApp. 
+
+Now, let's move on to the next challenge. We obviously want everyone on the internet to be able to use our dApp.
+In order to do that, we will need to deploy the frontend through a hosting platform.
+We will show how to do the deployment on two different hosting services: Vercel and Fly.io, and see how it works differently on each platform.
