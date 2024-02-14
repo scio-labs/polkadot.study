@@ -1,6 +1,7 @@
 # Build first ink! contract, deploy on a local node, and connect frontend to it
 In this part of the tutorial, we are going to build an ink! contract, deploy it on a running local node, and start the dApp by connecting the frontend to it. Make sure that you have the following installed before continuing.
 
+:::note
 ⛔ **Pre-requisites:**
 
 - Install Rust via the [Substrate Docs](https://docs.substrate.io/install/) (skip the "Compile a Substrate node" section)
@@ -9,6 +10,9 @@ In this part of the tutorial, we are going to build an ink! contract, deploy it 
 
 **Note: the installation process may take a while depending on your machine,** 
 **so please be patient.**
+:::
+
+## Build first ink! contract
 
 Once you have everything installed, let’s begin by starting your terminal again. Then, `cd` into [/contracts](https://github.com/scio-labs/inkathon/tree/main/contracts) directory.
 
@@ -25,6 +29,8 @@ Once the process is done, the terminal will show some outputs like the image bel
 ![Deploy script results](./assets/building-greeter-contract.png)
 
 As you can see on the image above, once the build is done, the script copies the generated files to [./deployments/greeter/](https://github.com/scio-labs/inkathon/tree/main/contracts/deployments/greeter). These files are then imported automatically by the frontend so we get a seamless integration between the contract- and the frontend-side. Then, it generates types via [typechain-polkadot](https://github.com/Brushfam/typechain-polkadot) into [./typed-contracts](https://github.com/scio-labs/inkathon/tree/main/contracts/typed-contracts). The generated types ensure full type-safety interactions within the boilerplate.
+
+## Deploy contract on a local node
 
 Now that the contract is ready to be deployed, we must first run a local node. Simply execute the node script.
 
@@ -58,7 +64,11 @@ Exported deployment info to file: deployments/greeter/development.ts
 
 Remember the contract address `5HUtt31...HA6mogr` as we will revisit this later.
 
-ℹ️ Alternatively, you can also use Contracts-UI to deploy contracts manually with the browser.
+:::info
+Alternatively, you can also use Contracts-UI to deploy contracts manually with the browser.
+:::
+
+## Connect frontend to the deployed contract
 
 We are done with the contract stuff. Now let’s connect the frontend to recently deployed contract. First, go to the frontend directory with `cd ../frontend`.
 
